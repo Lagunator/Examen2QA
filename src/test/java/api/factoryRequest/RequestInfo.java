@@ -26,12 +26,17 @@ public class RequestInfo {
         return this;
     }
 
-    public Map<String, String> getHeaders() {
+    public Map<String, String> getHeaders(String token) {
         return headers;
     }
 
     public RequestInfo setHeader(String key, String value) {
         this.headers.put(key,value);
+        return this;
+    }
+
+    public RequestInfo removeHeader (String key){
+        this.headers.remove(key);
         return this;
     }
 }

@@ -7,7 +7,7 @@ public class RequestPUT implements IRequest{
     @Override
     public Response send(RequestInfo request) {
         Response response = given()
-                .headers(request.getHeaders())
+                .headers(request.getHeaders("Token"))
                 .body(request.getBody())
                 .log().all()
                 .when()

@@ -7,7 +7,7 @@ public class RequestGET implements IRequest{
     @Override
     public Response send(RequestInfo request) {
         Response response = given()
-                .headers(request.getHeaders())
+                .headers(request.getHeaders("Token"))
                 .log().all()
                 .when()
                 .get(request.getHost());

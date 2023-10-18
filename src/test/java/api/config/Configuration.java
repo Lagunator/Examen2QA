@@ -1,8 +1,12 @@
 package api.config;
 
-public class Configuration {
-    public static String user="lagu@lagu.com";
-    public static String password="12345678";
+import java.util.Random;
 
-    public static String host="https://todo.ly";
+public class Configuration {
+    public static String user="laguna@lagu.com";
+    public static String password="12345678";
+    private static Random rand = new Random();
+    public static String userRand ="laguna"+ Integer.toString(rand.nextInt(10000)) +"@lagu.com";
+
+    public static String host="https://todo.ly/";
 }
