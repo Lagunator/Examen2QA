@@ -79,7 +79,7 @@ public class Ejer1 {
         response.then()
                 .log().all()
                 .statusCode(200)
-                .body("3868f89504f648599741674b05a6798f", equalTo(requestInfo.getHeaders("Token")));
+                .body("TokenString", equalTo(requestInfo.getHeaders("Token")));
     }
 
     private Response sendRequestToDeleteToken() {
